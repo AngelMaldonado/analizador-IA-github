@@ -11,9 +11,11 @@
 
   /** fonts **/
   --h1-fs: 4rem;
+  --h2-fs: 3rem;
   --h3-fs: 2rem;
   --h3-fw: 500;
-  --p-fs: 3rem;
+  --p-fs: 1.9rem;
+  --fs-xs: 1.5rem;
   --icon-size: 3.2rem;
   --lh-1: 1.2;
   --main-text-alignment: center;
@@ -31,7 +33,7 @@
     --h3-fs: 3rem;
 
     /** spacing **/
-    --main-x-padding: 12.6rem;
+    --main-x-padding: 10rem;
   }
 }
 
@@ -54,6 +56,8 @@ body {
   text-align: var(--main-text-alignment);
   color: var(--primary-color-10);
   background: var(--primary-gradient);
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 100vh;
   max-height: 100vh;
   padding: var(--main-y-padding) var(--main-x-padding);
@@ -72,6 +76,11 @@ main {
 /** COMMON **/
 h1 {
   font-size: var(--h1-fs);
+}
+
+h2 {
+  font-size: var(--h2-fs);
+  line-height: var(--lh-1);
 }
 
 h3 {
@@ -96,6 +105,6 @@ svg {
   flex-direction: column;
 }
 
-.lg-row {
-  flex-direction: row;
+.rounded-circle {
+  border-radius: 50%;
 }
