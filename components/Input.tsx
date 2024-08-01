@@ -1,3 +1,5 @@
+import "./Input.css"
+
 export type InputProps = {
   icono: React.ReactElement,
   placeholder: string,
@@ -10,7 +12,7 @@ export type InputProps = {
 export default function Input(props: InputProps) {
   return (
     <div className="input-wrapper">
-      <input title={props.title} type={props.type} name={props.name} id={props.id} />
+      <input title={props.title} type={props.type} placeholder={props.placeholder} name={props.name} id={props.id} />
       {props.icono}
     </div>
   )
