@@ -83,18 +83,6 @@ section {
         z-index: 0;
         width: 23rem;
         height: 23rem;
-        font-size: var(--p-fs);
-        border-radius: 1.2rem;
-        padding: 0;
-        color: var(--primary-color-10);
-        background-color: var(--primary-color-100);
-        top: 0;
-        left: 0;
-        transition: top 0.2s ease, left 0.2s ease, box-shadow 0.2s ease;
-
-        >span {
-          display: block;
-        }
 
         &:hover,
         &:focus {
