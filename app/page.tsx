@@ -3,6 +3,7 @@ import Input from "@/components/Input";
 import { FaGithubAlt, FaGoogle } from "react-icons/fa";
 import { useRouter } from "next/navigation"
 import "./app.css"
+import { getGithubUser } from "@/lib/ai-reviewer";
 
 export default function Home() {
   const router = useRouter()
@@ -15,10 +16,10 @@ export default function Home() {
         <h3>
           Escribe un perfil de GitHub y recibe retroalimentación sobre el desarrollador.
         </h3>
-        <form onSubmit={e => e.preventDefault()} className="flex-column">
-          <Input icono={<FaGoogle />} placeholder={"Google Gemini API key"} title={"API key de Google Gemini"} type={"password"} name={"apikey"} id={"apikey"} />
-          <Input onEnter={() => router.push("/results")} icono={<FaGithubAlt />} placeholder={"Ingresa el usuario de GitHub"} title={"Usuario de GitHub"} type={"text"} name={"github"} id={"github"} />
-          <button onClick={() => router.push("/results")} type="button">
+        <form onSubmit={getGithubUser} className="flex-column">
+          <Input required icon={<FaGoogle />} placeholder={"Google Gemini API key"} title={"API key de Google Gemini"} type={"password"} name={"apikey"} id={"apikey"} />
+          <Input required icon={<FaGithubAlt />} placeholder={"Ingresa el usuario de GitHub"} title={"Usuario de GitHub"} type={"text"} name={"user"} id={"user"} />
+          <button type="submit">
             <span>🔎</span>
             Revisar
           </button>
