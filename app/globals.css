@@ -99,7 +99,7 @@ svg {
   height: var(--icon-size);
 }
 
-button {
+button:not(.swal2-close) {
   cursor: pointer;
   border: none;
   font-size: var(--p-fs);

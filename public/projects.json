@@ -1,0 +1,72 @@
+[
+  {
+    "name": "React Portfolio",
+    "description": "A personal portfolio website built with React showcasing projects and skills.",
+    "languages": ["HTML", "CSS", "JavaScript", "React"],
+    "stars": 1500,
+    "forks": 350
+  },
+  {
+    "name": "AI Chatbot",
+    "description": "An intelligent chatbot using natural language processing and machine learning algorithms.",
+    "languages": ["Python", "TensorFlow", "NLP", "scikit-learn"],
+    "stars": 2000,
+    "forks": 500
+  },
+  {
+    "name": "Cloud Deployment Automation",
+    "description": "Automated deployment scripts for cloud infrastructure using Terraform and AWS.",
+    "languages": ["Python", "Terraform", "AWS CLI", "Bash"],
+    "stars": 1700,
+    "forks": 450
+  },
+  {
+    "name": "Flutter Mobile App",
+    "description": "A cross-platform mobile application developed using Flutter for both iOS and Android.",
+    "languages": ["Dart", "Flutter"],
+    "stars": 1800,
+    "forks": 400
+  },
+  {
+    "name": "Network Security Tools",
+    "description": "A suite of tools for network security analysis and penetration testing.",
+    "languages": ["Python", "C", "Bash", "JavaScript"],
+    "stars": 1600,
+    "forks": 300
+  },
+  {
+    "name": "Big Data ETL Pipeline",
+    "description": "A data engineering project that includes an ETL pipeline for big data processing.",
+    "languages": ["Python", "Java", "Scala", "SQL"],
+    "stars": 1400,
+    "forks": 320
+  },
+  {
+    "name": "CI/CD Pipeline",
+    "description": "A continuous integration and continuous deployment pipeline for automated software delivery.",
+    "languages": ["Python", "Ruby", "Go", "Shell"],
+    "stars": 1550,
+    "forks": 330
+  },
+  {
+    "name": "Unity Game",
+    "description": "A 3D game developed using Unity engine with C# scripting.",
+    "languages": ["C#", "Unity", "ShaderLab"],
+    "stars": 1900,
+    "forks": 420
+  },
+  {
+    "name": "IoT Home Automation",
+    "description": "An IoT project for home automation using Raspberry Pi and various sensors.",
+    "languages": ["Python", "C", "C++", "JavaScript"],
+    "stars": 1300,
+    "forks": 290
+  },
+  {
+    "name": "Automated Testing Suite",
+    "description": "A comprehensive suite for automated software testing using Selenium and other tools.",
+    "languages": ["Python", "Java", "Selenium", "Ruby"],
+    "stars": 1200,
+    "forks": 310
+  }
+]
