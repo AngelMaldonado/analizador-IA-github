@@ -27,8 +27,7 @@ export default function Form() {
     const res = await fetch(`https://api.github.com/users/${user}`)
 
     if (res.status === 200)
-      // Redirigir a la página de resultados
-      console.log(await res.json())
+      window.location.href = `/${user}`
     else if (res.status === 404) {
       setUserError("Usuario no encontrado")
       setTimeout(() => setUserError(""), 3000)

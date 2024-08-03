@@ -1,4 +1,3 @@
-"use client"
 import "./Input.css"
 
 export type InputProps = {

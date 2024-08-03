@@ -13,6 +13,7 @@ header {
 }
 
 section {
+
   >img {
     width: 20rem;
     height: 20rem;
@@ -184,7 +185,10 @@ section {
   }
 
   section {
+
     >main {
+      max-width: unset;
+      width: 100%;
       gap: 4rem;
 
       >.buttons {

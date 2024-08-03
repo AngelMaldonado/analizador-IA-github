@@ -2,7 +2,9 @@ import Input from "@/components/Input";
 import { FaGithubAlt } from "react-icons/fa";
 import "./page.css"
 
-export default function Results() {
+export default function Results({ params }: { params: { user: string } }) {
+  console.log(params)
+
   return <>
     <header>
       <Input icon={<FaGithubAlt />} placeholder={"Ingresa el usuario de GitHub"} title={"Usuario de GitHub"} type={"text"} name={"github"} id={"github"} />
