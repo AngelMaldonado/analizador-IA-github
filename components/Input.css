@@ -1,4 +1,6 @@
-.input-wrapper {
+.input-wrapper,
+&:has(>input:placeholder-shown),
+&:has(>input:not(place-holder-shown)) {
   border-radius: 1rem;
   position: relative;
   background-color: var(--primary-color-10);
@@ -27,5 +29,18 @@
     right: 1.2rem;
     top: 50%;
     transform: translateY(-50%);
+  }
+
+  &:has(>input:not(:placeholder-shown):invalid),
+  &:has(>span[aria-hidden=false]) {
+    outline: 3px solid rgb(255, 69, 69);
+  }
+
+  >span {
+    color: red;
+    position: absolute;
+    left: 1rem;
+    top: 0;
+    font-size: 1.2rem;
   }
 }

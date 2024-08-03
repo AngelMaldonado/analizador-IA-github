@@ -12,6 +12,11 @@ section {
 
   >form {
     gap: 1.5rem;
+
+    >button {
+      margin-top: 1rem;
+      padding: 1rem 0;
+    }
   }
 }
 

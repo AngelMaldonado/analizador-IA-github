@@ -5,7 +5,7 @@ import "./page.css"
 export default function Results() {
   return <>
     <header>
-      <Input icono={<FaGithubAlt />} placeholder={"Ingresa el usuario de GitHub"} title={"Usuario de GitHub"} type={"text"} name={"github"} id={"github"} />
+      <Input icon={<FaGithubAlt />} placeholder={"Ingresa el usuario de GitHub"} title={"Usuario de GitHub"} type={"text"} name={"github"} id={"github"} />
     </header>
     <section>
       <img className="rounded-circle" src="http://placehold.co/400" alt="" />
