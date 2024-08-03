@@ -1,22 +1,26 @@
 import Input from "@/components/Input";
 import { FaGithubAlt } from "react-icons/fa";
 import "./page.css"
+import { getGithubUser, getUserEvents, getUserRepos } from "@/lib/git-fetcher";
 
-export default function Results({ params }: { params: { user: string } }) {
-  console.log(params)
+export default async function Results({ params }: { params: { user: string } }) {
+  //await new Promise(resolve => setTimeout(resolve, 4000))
+  const user = await getGithubUser(params.user)
+  const repos = await getUserRepos(params.user)
+  const events = await getUserEvents(params.user)
 
   return <>
     <header>
       <Input icon={<FaGithubAlt />} placeholder={"Ingresa el usuario de GitHub"} title={"Usuario de GitHub"} type={"text"} name={"github"} id={"github"} />
     </header>
     <section>
-      <img className="rounded-circle" src="http://placehold.co/400" alt="" />
+      <img className="rounded-circle" src={user.avatar_url} alt="" />
       <div className="profile-info flex-column">
-        <h2>Nombre Completo Del Usuario</h2>
-        <p>(Usuario de GitHub)</p>
+        <h2>{user.name}</h2>
+        <p>({user.login})</p>
         <ul>
           <li>📬 Correo</li>
-          <li>🗃️ Repos</li>
+          <li>🗃️ {user.public_repos} repos públicos</li>
           <li>⭐ Estrellas</li>
         </ul>
         <div className="profile-info__langs">
