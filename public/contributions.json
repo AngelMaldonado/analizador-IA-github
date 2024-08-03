@@ -1,0 +1,62 @@
+[
+  {
+    "name": "React Portfolio",
+    "contribution_percentage": 80,
+    "contribution": "Developed the front-end using React and integrated with backend APIs.",
+    "languages": ["HTML", "CSS", "JavaScript", "React"]
+  },
+  {
+    "name": "AI Chatbot",
+    "contribution_percentage": 75,
+    "contribution": "Implemented the natural language processing and machine learning models.",
+    "languages": ["Python", "TensorFlow", "NLP", "scikit-learn"]
+  },
+  {
+    "name": "Cloud Deployment Automation",
+    "contribution_percentage": 70,
+    "contribution": "Created and optimized Terraform scripts for AWS infrastructure deployment.",
+    "languages": ["Python", "Terraform", "AWS CLI", "Bash"]
+  },
+  {
+    "name": "Flutter Mobile App",
+    "contribution_percentage": 85,
+    "contribution": "Led the development of the cross-platform mobile application using Flutter.",
+    "languages": ["Dart", "Flutter"]
+  },
+  {
+    "name": "Network Security Tools",
+    "contribution_percentage": 65,
+    "contribution": "Developed security analysis tools and performed penetration testing.",
+    "languages": ["Python", "C", "Bash", "JavaScript"]
+  },
+  {
+    "name": "Big Data ETL Pipeline",
+    "contribution_percentage": 60,
+    "contribution": "Built the ETL pipeline and optimized data processing workflows.",
+    "languages": ["Python", "Java", "Scala", "SQL"]
+  },
+  {
+    "name": "CI/CD Pipeline",
+    "contribution_percentage": 70,
+    "contribution": "Designed and implemented the continuous integration and deployment pipeline.",
+    "languages": ["Python", "Ruby", "Go", "Shell"]
+  },
+  {
+    "name": "Unity Game",
+    "contribution_percentage": 80,
+    "contribution": "Developed core gameplay mechanics and integrated assets in Unity.",
+    "languages": ["C#", "Unity", "ShaderLab"]
+  },
+  {
+    "name": "IoT Home Automation",
+    "contribution_percentage": 75,
+    "contribution": "Implemented IoT devices communication and home automation logic.",
+    "languages": ["Python", "C", "C++", "JavaScript"]
+  },
+  {
+    "name": "Automated Testing Suite",
+    "contribution_percentage": 65,
+    "contribution": "Created automated test scripts and integrated them into the CI pipeline.",
+    "languages": ["Python", "Java", "Selenium", "Ruby"]
+  }
+]

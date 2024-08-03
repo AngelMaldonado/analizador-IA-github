@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Web Development",
+    "description": "Developing and maintaining websites and web applications. Includes subfields such as front-end development (HTML, CSS, JavaScript, frameworks like React and Angular), back-end development (Node.js, Express, databases like MongoDB and SQL), and full-stack development."
+  },
+  {
+    "title": "Artificial Intelligence",
+    "description": "Applying machine learning and deep learning techniques to build intelligent systems. Subfields include natural language processing, computer vision, reinforcement learning, and data science. Practicing with frameworks like TensorFlow, PyTorch, and scikit-learn."
+  },
+  {
+    "title": "Cloud Computing",
+    "description": "Designing and managing cloud-based systems. Involves working with services from AWS, Azure, and Google Cloud Platform. Subfields include cloud architecture, DevOps, serverless computing, and containerization using Docker and Kubernetes."
+  },
+  {
+    "title": "Mobile Development",
+    "description": "Creating applications for mobile devices. Includes subfields like iOS development (Swift, Objective-C), Android development (Kotlin, Java), and cross-platform development (Flutter, React Native). Focuses on building responsive, user-friendly mobile applications."
+  },
+  {
+    "title": "Cybersecurity",
+    "description": "Protecting systems and networks from digital attacks. Subfields include network security, information security, penetration testing, and ethical hacking. Involves practicing with tools and frameworks like Metasploit, Wireshark, and various encryption techniques."
+  },
+  {
+    "title": "Data Engineering",
+    "description": "Building and maintaining data infrastructure. Includes subfields such as ETL (Extract, Transform, Load), data warehousing, and big data processing. Practicing with tools and technologies like Apache Hadoop, Apache Spark, and SQL databases."
+  },
+  {
+    "title": "DevOps",
+    "description": "Integrating development and operations to improve collaboration and productivity. Subfields include continuous integration/continuous deployment (CI/CD), infrastructure as code, and monitoring. Tools often used include Jenkins, Ansible, and Terraform."
+  },
+  {
+    "title": "Game Development",
+    "description": "Creating video games for various platforms. Subfields include game design, graphics programming, and physics simulation. Practicing with game engines like Unity and Unreal Engine, and programming languages such as C# and C++."
+  },
+  {
+    "title": "Internet of Things (IoT)",
+    "description": "Developing systems that connect and interact with physical devices over the internet. Subfields include embedded systems, sensor networks, and smart home technology. Involves working with hardware platforms like Arduino and Raspberry Pi, and IoT protocols."
+  },
+  {
+    "title": "Software Testing and Quality Assurance",
+    "description": "Ensuring the quality and functionality of software through rigorous testing. Subfields include manual testing, automated testing, performance testing, and security testing. Practicing with tools like Selenium, JUnit, and TestNG."
+  }
+]

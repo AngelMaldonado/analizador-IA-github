@@ -1,0 +1,5 @@
+{
+  "summary": "Web Development involves building and maintaining websites and web applications. It encompasses both front-end and back-end development.",
+  "strengths": ["HTML", "CSS", "JavaScript", "React", "Angular", "Responsive", "Dynamic"],
+  "weaknesses": ["Rapidly-changing", "Cross-browser", "Performance", "Scalability"]
+}

@@ -3,16 +3,19 @@ import { FaGithubAlt } from "react-icons/fa";
 import "./page.css"
 import { getGithubUser, getUserEvents, getUserRepos } from "@/lib/git-fetcher";
 import Modal from "@/components/Modal";
-import Specialties from "@/components/Specialties";
-import Projects from "@/components/Projects";
-import Contributions from "@/components/Contributions";
-import Personality from "@/components/Personality";
+import Specialties from "@/components/templates/Specialties";
+import Projects from "@/components/templates/Projects";
+import Contributions from "@/components/templates/Contributions";
+import PersonalityStats from "@/components/templates/PersonalityStats";
+import { analyzeUser } from "@/lib/ai-reviewer";
 
 export default async function Results({ params }: { params: { user: string } }) {
   //await new Promise(resolve => setTimeout(resolve, 4000))
   const user = await getGithubUser(params.user)
   const repos = await getUserRepos(params.user)
   const events = await getUserEvents(params.user)
+
+  const { specialties, projects, contributions, personality } = await analyzeUser(user, repos, events)
 
   return <>
     <header>
@@ -42,10 +45,10 @@ export default async function Results({ params }: { params: { user: string } }) 
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt perferendis vero porro, aperiam similique, consequatur fuga possimus qui minima libero unde? Rem aut eum labore, eius officiis molestias maxime atque?
         </p>
         <div className="buttons">
-          <Modal html={<Specialties specialties={["Desarrollo web", "Arquitectura de software"]} />}><span>🌟</span>Especialidades</Modal>
-          <Modal html={<Projects projects={[]} />}><span>🚀</span>Proyectos</Modal>
-          <Modal html={<Contributions contributions={[]} />}><span>🤝</span>Contribuciones</Modal>
-          <Modal html={<Personality personality={[]} />}><span>🧐</span>Personalidad</Modal>
+          <Modal html={<Specialties specialties={specialties} />}><span>🌟</span>Especialidades</Modal>
+          <Modal html={<Projects projects={projects} />}><span>🚀</span>Proyectos</Modal>
+          <Modal html={<Contributions contributions={contributions} />}><span>🤝</span>Contribuciones</Modal>
+          <Modal html={<PersonalityStats personality={personality} />}><span>🧐</span>Personalidad</Modal>
         </div>
       </main>
     </section>
