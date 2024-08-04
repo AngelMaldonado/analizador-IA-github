@@ -1,0 +1,18 @@
+.personality-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  >ul {
+    list-style: symbols;
+    margin-left: 3rem;
+    text-align: left;
+    font-size: 1.2rem;
+  }
+}
+
+@counter-style symbols {
+  system: cyclic;
+  symbols: "\02764 \0FE0F" "\01F9E1" "\01F49B" "\01F49A" "\01F499" "\01F49C" "\01F90E" "\01F5A4" "\01F90D";
+  suffix: "  ";
+}

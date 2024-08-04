@@ -1,0 +1,6 @@
+.specialties {
+  >li {
+    padding: 2rem;
+    box-shadow: var(--modal-card-box-shadow);
+  }
+}

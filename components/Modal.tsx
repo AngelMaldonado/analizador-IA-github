@@ -15,6 +15,7 @@ export default function Modal(props: ModalProps) {
   function sweetModal() {
     return withReactContent(Swal).fire({
       html: props.html,
+      width: "60rem",
       showCloseButton: true,
       showConfirmButton: false,
     })

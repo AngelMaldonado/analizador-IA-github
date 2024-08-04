@@ -1,4 +1,5 @@
 import { Personality } from "@/lib/models/Personality"
+import "./PersonalityStats.css"
 
 type PersonalityProps = {
   personality: Personality
@@ -6,16 +7,16 @@ type PersonalityProps = {
 
 export default function PersonalityStats(props: PersonalityProps) {
   return (
-    <div>
+    <div className="personality-stats">
       <h3>Personalidad</h3>
       <p>{props.personality.summary}</p>
-      <h3>Fortalezas</h3>
+      <h3>Fortalezas 💪</h3>
       <ul>
         {props.personality.strengths.map((strength, index) =>
           <li key={`strength-${index}`}>{strength}</li>
         )}
       </ul>
-      <h3>Debilidades</h3>
+      <h3>Debilidades 🤒</h3>
       <ul>
         {props.personality.weaknesses.map((weakness, index) =>
           <li key={`weakness-${index}`}>{weakness}</li>

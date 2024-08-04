@@ -1,0 +1,17 @@
+.projects {
+  >li {
+    position: relative;
+    padding: 2rem;
+    box-shadow: var(--modal-card-box-shadow);
+
+    >.stats {
+      position: absolute;
+      top: 0.5rem;
+
+      >p {
+        float: left;
+        font-size: 1rem;
+      }
+    }
+  }
+}

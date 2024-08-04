@@ -8,6 +8,7 @@
   --primary-color-50: #37B7C3;
   --primary-color-10: #F1FCFF;
   --primary-gradient: var(--gradiente-fondo, linear-gradient(180deg, #088395 0%, #364D97 100%));
+  --modal-card-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 
   /** fonts **/
   --h1-fs: 4rem;
@@ -122,6 +123,38 @@ button:not(.swal2-close) {
     left: -1.2rem;
     box-shadow: 1.2rem 1.2rem 0 var(--primary-color-50);
   }
+}
+
+.swal2-html-container {
+  >div>ul>li {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.badges-list {
+  position: absolute;
+  bottom: -1rem;
+
+  >li {
+    float: left;
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
+    color: white;
+    background-color: black;
+    width: fit-content;
+    padding: 0.2rem 0.5rem;
+    border-radius: 2rem;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
 }
 
 /** UTILITIES **/
