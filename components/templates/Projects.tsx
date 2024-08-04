@@ -18,7 +18,7 @@ export default function Projects(props: ProjectsProps) {
               <p className="stars">{project.stars} Estrellas✨</p>
               <p className="forks">{project.forks} Forks🍴</p>
             </div>
-            <ul>
+            <ul className="badges-list">
               {project.languages.map((language, index) =>
                 <li key={`language-${index}`}>{language}</li>
               )}

@@ -1,0 +1,16 @@
+.contributions {
+  >li {
+    position: relative;
+    padding: 6rem 2rem 3rem 2rem;
+    box-shadow: var(--modal-card-box-shadow);
+
+    >.contribution-level {
+      border: 2px solid green;
+      padding: 0.5rem 2rem;
+      position: absolute;
+      top: 1rem;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
