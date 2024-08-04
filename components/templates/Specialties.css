@@ -1,8 +1,6 @@
 .specialties {
   >li {
     padding: 2rem;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    box-shadow: var(--modal-card-box-shadow);
   }
 }

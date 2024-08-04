@@ -8,6 +8,7 @@
   --primary-color-50: #37B7C3;
   --primary-color-10: #F1FCFF;
   --primary-gradient: var(--gradiente-fondo, linear-gradient(180deg, #088395 0%, #364D97 100%));
+  --modal-card-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 
   /** fonts **/
   --h1-fs: 4rem;
@@ -121,6 +122,13 @@ button:not(.swal2-close) {
     top: -1.2rem;
     left: -1.2rem;
     box-shadow: 1.2rem 1.2rem 0 var(--primary-color-50);
+  }
+}
+
+.swal2-html-container {
+  >div>ul>li {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
   }
 }
 
