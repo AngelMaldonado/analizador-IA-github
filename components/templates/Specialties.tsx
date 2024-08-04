@@ -1,4 +1,5 @@
 import { Specialty } from "@/lib/models/Specialty"
+import "./Specialties.css"
 
 type SpecialtiesProps = {
   specialties: Specialty[]
@@ -6,13 +7,16 @@ type SpecialtiesProps = {
 
 export default function Specialties(props: SpecialtiesProps) {
   return (
-    <ul>
-      {props.specialties.map((specialty, index) =>
-        <li key={`specialty-${index}`}>
-          <header>{specialty.title}</header>
-          <p>{specialty.description}</p>
-        </li>
-      )}
-    </ul>
+    <div>
+      <h2>Especialidades</h2>
+      <ul className="specialties">
+        {props.specialties.map((specialty, index) =>
+          <li key={`specialty-${index}`}>
+            <header><h3>{specialty.title}</h3></header>
+            <p>{specialty.description}</p>
+          </li>
+        )}
+      </ul>
+    </div>
   )
 }
