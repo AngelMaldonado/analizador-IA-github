@@ -1,5 +1,11 @@
 import Form from "@/components/Form";
 import "./app.css"
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Analizador IA Github",
+  description: "Analizador de perfiles de Github con Vercel AI SDK y Google Gemini 1.5Pro",
+}
 
 export default async function Home() {
   return (

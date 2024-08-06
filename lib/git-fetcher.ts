@@ -72,6 +72,21 @@ export async function getUserRepos(user: string) {
 
 export async function getUserEvents(user: string) {
   const response = await fetch(`https://api.github.com/users/${user}/events`)
-  const data = await response.json() as Array<Event>
-  return data
+  const data = await response.json()
+  data.forEach((event: any) => {
+    delete event.id
+    delete event.actor
+    event.repo = event.repo.name
+    if (event.type == "PushEvent") {
+      event.payload = { commits: event.payload.commits.map((commit: any) => commit.message).toString() }
+    } else if (event.type == "PullRequestEvent") {
+      event.payload = { pull_request: event.payload.pull_request.title + " -- " + event.payload.pull_request.body }
+    } else if (event.type == "PullRequestReviewEvent") {
+      event.payload = { review: event.payload.review.body }
+    } else {
+      event.payload = {}
+    }
+  });
+
+  return data as Array<Event>
 }
