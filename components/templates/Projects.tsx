@@ -10,7 +10,7 @@ export default function Projects(props: ProjectsProps) {
     <div>
       <h2>Proyectos</h2>
       <ul className="projects">
-        {props.projects.map((project, index) =>
+        {props.projects.length > 0 ? props.projects.map((project, index) =>
           <li key={`project-${index}`}>
             <h3>{project.name}</h3>
             <p>{project.description}</p>
@@ -24,7 +24,7 @@ export default function Projects(props: ProjectsProps) {
               )}
             </ul>
           </li>
-        )}
+        ) : <li>No hay suficiente información para generar los proyectos 🥺</li>}
       </ul>
     </div>
   )

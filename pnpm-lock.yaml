@@ -32,6 +32,9 @@ importers:
       sweetalert2-react-content:
         specifier: ^5.0.7
         version: 5.0.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sweetalert2@11.12.4)
+      zod:
+        specifier: ^3.23.8
+        version: 3.23.8
     devDependencies:
       '@types/node':
         specifier: ^20

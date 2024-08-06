@@ -1,5 +1,3 @@
-import Input from "@/components/Input";
-import { FaGithubAlt } from "react-icons/fa";
 import "./page.css"
 import { getGithubUser, getUserEvents, getUserRepos } from "@/lib/git-fetcher";
 import Modal from "@/components/Modal";
@@ -8,9 +6,9 @@ import Projects from "@/components/templates/Projects";
 import Contributions from "@/components/templates/Contributions";
 import PersonalityStats from "@/components/templates/PersonalityStats";
 import { analyzeUser } from "@/lib/ai-reviewer";
+import Form from "@/components/Form";
 
 export default async function Results({ params }: { params: { user: string } }) {
-  //await new Promise(resolve => setTimeout(resolve, 4000))
   const user = await getGithubUser(params.user)
   const repos = await getUserRepos(params.user)
   const events = await getUserEvents(params.user)
@@ -19,7 +17,7 @@ export default async function Results({ params }: { params: { user: string } }) 
 
   return <>
     <header>
-      <Input icon={<FaGithubAlt />} placeholder={"Ingresa el usuario de GitHub"} title={"Usuario de GitHub"} type={"text"} name={"github"} id={"github"} />
+      <Form />
     </header>
     <section>
       <img className="rounded-circle" src={user.avatar_url} alt="" />
@@ -27,9 +25,9 @@ export default async function Results({ params }: { params: { user: string } }) 
         <h2>{user.name}</h2>
         <p>({user.login})</p>
         <ul>
-          <li>📬 Correo</li>
+          <li>📬</li>
           <li>🗃️ {user.public_repos} repos públicos</li>
-          <li>⭐ Estrellas</li>
+          <li>⭐ {user.followers}</li>
         </ul>
         <div className="profile-info__langs">
           <p>Top 4 lenguajes:</p>

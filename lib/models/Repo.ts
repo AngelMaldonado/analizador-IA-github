@@ -5,4 +5,8 @@ export interface Repo {
   created_at: string
   updated_at: string
   pushed_at: string
+  name: string
+  size: number
+  topics: string[]
+  description: string
 }
