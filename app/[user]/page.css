@@ -150,10 +150,8 @@ section {
         align-items: center;
         gap: 1rem;
 
-        >* {
-          margin-top: 0;
-          margin-bottom: 0;
-
+        >p {
+          margin: 0;
         }
 
         >img {
