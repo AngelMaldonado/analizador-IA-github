@@ -90,7 +90,5 @@ export async function getUserEvents(user: string) {
     }
   });
 
-  console.log(events)
-
   return events as Array<Event>
 }
