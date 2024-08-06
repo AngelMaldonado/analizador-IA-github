@@ -1,12 +1,7 @@
-"use client"
-import { useParams } from "next/navigation";
+import "./loading.css"
 
 export default function Loading() {
-  const params = useParams<{ user: string }>()
-
   return (
-    <div>
-      <h1>Loading...</h1>
-    </div>
+    <div className="loader"></div>
   );
 }
