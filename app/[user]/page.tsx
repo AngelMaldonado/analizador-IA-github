@@ -13,6 +13,8 @@ export const metadata: Metadata = {
   description: "Analizador de perfiles de Github con Vercel AI SDK y Google Gemini 1.5Pro",
 }
 
+export const maxDuration = 60000
+
 export default async function Results({ params }: { params: { user: string } }) {
   const user = await getGithubUser(params.user)
   const repos = await getUserRepos(params.user)
