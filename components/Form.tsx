@@ -3,12 +3,10 @@
 import { FormEvent, useState } from "react"
 import Input from "./Input"
 import { FaGithubAlt } from "react-icons/fa"
-import { useRouter } from "next/navigation"
 
 export default function Form() {
   const [loading, setLoading] = useState(false)
   const [userError, setUserError] = useState('')
-  const router = useRouter()
 
   return (
     <form onSubmit={handleSubmit} className="flex-column">
@@ -29,7 +27,7 @@ export default function Form() {
     const res = await fetch(`https://api.github.com/users/${user}`)
 
     if (res.status === 200)
-      router.push(`/${user}`)
+      window.location.href = `/${user}`
     else if (res.status === 404) {
       setUserError("Usuario no encontrado")
       setTimeout(() => setUserError(""), 3000)
