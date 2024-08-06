@@ -71,9 +71,11 @@ export async function getUserRepos(user: string) {
 }
 
 export async function getUserEvents(user: string) {
+  const max_events = 10
   const response = await fetch(`https://api.github.com/users/${user}/events`)
   const data = await response.json()
-  data.forEach((event: any) => {
+  const events = data.slice(0, data.length > max_events ? max_events : data.length)
+  events.forEach((event: any) => {
     delete event.id
     delete event.actor
     event.repo = event.repo.name
@@ -88,5 +90,7 @@ export async function getUserEvents(user: string) {
     }
   });
 
-  return data as Array<Event>
+  console.log(events)
+
+  return events as Array<Event>
 }
