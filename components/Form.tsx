@@ -3,6 +3,7 @@
 import { FormEvent, useState } from "react"
 import Input from "./Input"
 import { FaGithubAlt } from "react-icons/fa"
+import { Button } from "@chakra-ui/react"
 
 export default function Form() {
   const [loading, setLoading] = useState(false)
@@ -11,6 +12,7 @@ export default function Form() {
   return (
     <form onSubmit={handleSubmit} className="flex-column">
       <Input required icon={<FaGithubAlt />} error={userError} placeholder={"Ingresa el usuario de GitHub"} title={"Usuario de GitHub"} type={"text"} name={"user"} id={"user"} />
+      <Button colorScheme='dark'>hello</Button>
       <button type="submit">
         <span>🔎</span>
         {loading ? "Cargando..." : "Revisar"}
