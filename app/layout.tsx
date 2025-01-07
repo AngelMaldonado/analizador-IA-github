@@ -1,3 +1,4 @@
+import Background from "@/components/ui/background";
 import { Provider } from "@/components/ui/provider";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -18,6 +19,7 @@ export default function RootLayout({
     <html suppressHydrationWarning lang="es">
       <body>
         <Provider>
+          <Background />
           {children}
         </Provider>
       </body>

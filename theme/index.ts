@@ -13,9 +13,7 @@ const customConfig = defineConfig({
       height: "100vh",
     },
     main: {
-      zIndex: 1,
-      width: "100vw",
-      height: "100vh",
+      p: 4,
     },
   },
   theme: {
