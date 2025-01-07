@@ -12,7 +12,7 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer"
-import { chakra, IconButton, Image, useRecipe } from "@chakra-ui/react"
+import { chakra, IconButton, Image, useRecipe, VStack } from "@chakra-ui/react"
 import { Menu } from "lucide-react"
 
 export function Navbar() {
@@ -21,7 +21,7 @@ export function Navbar() {
 
   return (
     <chakra.nav css={styles}>
-      <Image src="/owl.svg" alt="Logo" width={10} />
+      <Image src="/owl.svg" alt="Logo" width="auto" h={10} />
       <Drawer />
     </chakra.nav>
   )
@@ -32,25 +32,21 @@ function Drawer() {
     <DrawerRoot>
       <DrawerBackdrop />
       <DrawerTrigger asChild>
-        <IconButton aria-label="Open drawer" size="sm">
+        <IconButton variant="surface" aria-label="Open drawer">
           <Menu />
         </IconButton>
       </DrawerTrigger>
       <DrawerContent>
         <DrawerHeader>
-          <DrawerTitle>Drawer Title</DrawerTitle>
+          <DrawerTitle>Github Profile Analyzer</DrawerTitle>
         </DrawerHeader>
         <DrawerBody>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </p>
+          <VStack w="full" gap={4}>
+            <Button w="full">Home</Button>
+          </VStack>
         </DrawerBody>
         <DrawerFooter>
-          <DrawerActionTrigger asChild>
-            <Button variant="outline">Cancel</Button>
-          </DrawerActionTrigger>
-          <Button>Save</Button>
+          <Button>Login</Button>
         </DrawerFooter>
         <DrawerCloseTrigger />
       </DrawerContent>

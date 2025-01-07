@@ -5,7 +5,7 @@ export const Navbar = defineRecipe({
     display: "flex",
     justifyContent: "space-between",
     bg: "whiteAlpha.200",
-    px: 12,
+    px: { base: 4, md: 12 },
     py: 4,
   }
 })

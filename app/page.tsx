@@ -3,7 +3,7 @@ import { Navbar } from "@/components/ui/navbar";
 import { Box, chakra, SystemRecipeFn, useRecipe } from "@chakra-ui/react";
 
 export default function Home() {
-  const recipie = useRecipe({ key: "background" }) as SystemRecipeFn<{}, {}>
+  const recipie = useRecipe({ key: "Background" }) as SystemRecipeFn<{}, {}>
   const styles = recipie({ base: true })
 
   return (
