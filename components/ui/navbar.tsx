@@ -1,75 +1,59 @@
-import { Box, Flex, Icon, HStack, IconButton, Link, Stack, Text, useDisclosure } from "@chakra-ui/react";
+"use client"
+import { Button } from "@/components/ui/button"
+import {
+  DrawerActionTrigger,
+  DrawerBackdrop,
+  DrawerBody,
+  DrawerCloseTrigger,
+  DrawerContent,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerRoot,
+  DrawerTitle,
+  DrawerTrigger,
+} from "@/components/ui/drawer"
+import { chakra, IconButton, Image, useRecipe } from "@chakra-ui/react"
+import { Menu } from "lucide-react"
 
-export default function GlassNavbar() {
-  const { onOpen, onClose, open } = useDisclosure();
-
-  const Links = ["Home", "About", "Services", "Contact"];
-
-  const NavLink = ({ children }: { children: string }) => (
-    <Link
-      px={3}
-      py={1}
-      rounded="md"
-      _hover={{
-        textDecoration: "none",
-        bg: "whiteAlpha.300",
-      }}
-      href={`#${children.toLowerCase()}`}
-    >
-      {children}
-    </Link>
-  );
+export function Navbar() {
+  const recipe = useRecipe({ key: "Navbar" }) as any
+  const styles = recipe({ base: true })
 
   return (
-    <Box>
-      <Flex
-        as="nav"
-        bg="whiteAlpha.200"
-        backdropFilter="blur(10px)"
-        w="100%"
-        p={4}
-        color="white"
-        alignItems="center"
-        justifyContent="space-between"
-        left={0}
-        top={0}
-        position="fixed"
-        zIndex="10"
-        shadow="md"
-      >
-        <Text fontSize="lg" fontWeight="bold">
-          MyLogo
-        </Text>
-        <IconButton
-          display={{ base: "flex", md: "none" }}
-          onClick={open ? onClose : onOpen}
-          // _icon={open ? <Icon><CircleX /></Icon> : <Icon><CircleX /></Icon>}
-          variant="outline"
-          aria-label="Toggle Navigation"
-        />
-        <HStack
-          as="nav"
-          display={{ base: "none", md: "flex" }}
-        >
-          {Links.map((link) => (
-            <NavLink key={link}>{link}</NavLink>
-          ))}
-        </HStack>
-      </Flex>
-      {open && (
-        <Box
-          pb={4}
-          display={{ md: "none" }}
-          bg="whiteAlpha.200"
-          backdropFilter="blur(10px)"
-        >
-          <Stack as="nav">
-            {Links.map((link) => (
-              <NavLink key={link}>{link}</NavLink>
-            ))}
-          </Stack>
-        </Box>
-      )}
-    </Box>
-  );
+    <chakra.nav css={styles}>
+      <Image src="/owl.svg" alt="Logo" width={10} />
+      <Drawer />
+    </chakra.nav>
+  )
+}
+
+function Drawer() {
+  return (
+    <DrawerRoot>
+      <DrawerBackdrop />
+      <DrawerTrigger asChild>
+        <IconButton aria-label="Open drawer" size="sm">
+          <Menu />
+        </IconButton>
+      </DrawerTrigger>
+      <DrawerContent>
+        <DrawerHeader>
+          <DrawerTitle>Drawer Title</DrawerTitle>
+        </DrawerHeader>
+        <DrawerBody>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </DrawerBody>
+        <DrawerFooter>
+          <DrawerActionTrigger asChild>
+            <Button variant="outline">Cancel</Button>
+          </DrawerActionTrigger>
+          <Button>Save</Button>
+        </DrawerFooter>
+        <DrawerCloseTrigger />
+      </DrawerContent>
+    </DrawerRoot>
+  )
 }

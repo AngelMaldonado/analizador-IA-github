@@ -1,6 +1,6 @@
 "use client"
-import GlassNavbar from "@/components/ui/navbar";
-import { Box, SystemRecipeFn, useRecipe } from "@chakra-ui/react";
+import { Navbar } from "@/components/ui/navbar";
+import { Box, chakra, SystemRecipeFn, useRecipe } from "@chakra-ui/react";
 
 export default function Home() {
   const recipie = useRecipe({ key: "background" }) as SystemRecipeFn<{}, {}>
@@ -9,9 +9,9 @@ export default function Home() {
   return (
     <>
       <Box css={styles}></Box>
-      <main style={{ height: "100vh", display: "flex", justifyContent: "center", alignItems: "center" }}>
-        <GlassNavbar />
-      </main>
+      <chakra.main>
+        <Navbar />
+      </chakra.main>
     </>
   );
 }
