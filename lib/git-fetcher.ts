@@ -1,6 +1,6 @@
-import { Event } from "./models/Event"
-import { GithubUser } from "./models/GithubUser"
-import { Repo } from "./models/Repo"
+import { Event } from "./types/Event"
+import { GithubUser } from "./types/GithubUser"
+import { Repo } from "./types/Repo"
 
 export async function getGithubUser(user: string): Promise<GithubUser> {
   const response = await fetch(`https://api.github.com/users/${user}`)

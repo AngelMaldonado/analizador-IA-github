@@ -1,4 +1,4 @@
-import { Specialty } from "@/lib/models/Specialty"
+import { Specialty } from "@/lib/types/Specialty"
 import "./Specialties.css"
 
 type SpecialtiesProps = {

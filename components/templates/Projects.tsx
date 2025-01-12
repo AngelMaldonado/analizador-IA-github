@@ -1,4 +1,4 @@
-import { Project } from "@/lib/models/Project"
+import { Project } from "@/lib/types/Project"
 import "./Projects.css"
 
 type ProjectsProps = {

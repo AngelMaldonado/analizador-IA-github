@@ -1,6 +1,6 @@
-import { Event } from "./models/Event";
-import { GithubUser } from "./models/GithubUser";
-import { Repo } from "./models/Repo";
+import { Event } from "./types/Event";
+import { GithubUser } from "./types/GithubUser";
+import { Repo } from "./types/Repo";
 import { z } from 'zod';
 import { generateObject } from "ai"
 import { google } from "@ai-sdk/google"

@@ -1,4 +1,4 @@
-import { Personality } from "@/lib/models/Personality"
+import { Personality } from "@/lib/types/Personality"
 import "./PersonalityStats.css"
 
 type PersonalityProps = {
